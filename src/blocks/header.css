@@ -1,0 +1,99 @@
+.header {
+  width: 880px;
+  margin-top: 15px;
+  border-bottom: solid #545454 thin;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 173px;
+  height: 33px;
+  transition: all 0.3s ease;
+}
+
+.header__burger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header__signUp {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__user-email {
+  color: white;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .header {
+    width: 90%;
+  }
+
+  .header__top {
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .header__top {
+    padding-bottom: 10px;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
+  .header__container {
+    flex-direction: column;
+    display: none;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .header__container.open {
+    display: flex;
+  }
+
+  .header--open .header__logo {
+    margin-top: 20px;
+  }
+}
